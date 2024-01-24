@@ -1,5 +1,3 @@
-# SSH
-
 Authenticate:
 
 `ssh -i <KEY> -T git@github.com`
