@@ -12,6 +12,8 @@ så specificeras nyckel. Annars testas alla nycklar tror jag vilken kan riskera 
 
 ifall annan port än 22 används.
 
+<br>
+
 ### Cacha nyckel tillfälligt
 
 Är ssh-agent igång?
@@ -25,6 +27,8 @@ Starta annars med
 Cacha
 
 `ssh-add ~/.ssh/KEY`
+
+<br>
 
 ### Skapa nycklar
 
@@ -40,6 +44,8 @@ Välj ed25519 (kortare och säkrare).
 
 Skapa passhprase (säkrare då det inte gör lika mycket om den privata nyckeln blir stulen. Anges sedan på klientsidan vid anslutning, men nyckeln kan även cachas så att man slipper uppge passphrase på ett tag).
 
+<br>
+
 ### Överför publik nyckel till server-host
 
 Antingen klipp och klistra publik nyckel till 
@@ -49,6 +55,8 @@ Antingen klipp och klistra publik nyckel till
 eller kör
 
 `ssh-copy-id -i ~/.ssh/KEY.pub USER@IP`
+
+<br>
 
 ### Filer (klientsidan)
 
@@ -81,6 +89,8 @@ Flera hosts kan läggas till i filen.
 
 Globala inställningar (överskuggas av *~/.ssh/config*).
 
+<br>
+
 ### Filer (hostsidan)
 
 *~/.ssh/authorized_keys* 
@@ -103,6 +113,8 @@ Om man klonar en server följer dessa med vilket kan göra klienten förvirrad (
 
 Var försiktig med att radera dessa tydligen.
 
+<br>
+
 ### Loggar
 
 `systemctl status ssh` <br>
@@ -111,15 +123,21 @@ Var försiktig med att radera dessa tydligen.
 
 Inte samma i alla system men på ett ungefär.
 
+<br>
+
 ### Härdning
 
 Inaktivera lösenords- och root-inloggning (se ovan om *sshd_config*).
+
+<br>
 
 ### Övrigt
 
 Använd `ssh -v` för detaljerad output.
 
 Olika nycklar till olika servrar är säkrare. Om en blir stulen så kompromissas ej de andra. Dock kanske rimligt att ha samma till sina egna servrar. Men har man många nyckar så bör man specificera vilken man vill använda vid anslutning, annars testas alla och man kan bli utlåst.
+
+<br>
 
 ### Källor
 
