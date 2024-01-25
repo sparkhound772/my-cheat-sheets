@@ -54,11 +54,11 @@ Uncommit, don't unstage or untrack and keep changes:
 
 Undo uncommitted (but staged) changes in files (and remove new files):
 
-'git reset --hard HEAD'
+`git reset --hard HEAD`
 
 Undo uncommitted (and unstaged) changes in files (but won't remove new and untracked files for some reason):
 
-'git reset --hard HEAD'
+`git reset --hard HEAD`
 
 Same as previous one but for specific files it seems:
 
