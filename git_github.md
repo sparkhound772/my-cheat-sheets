@@ -16,6 +16,10 @@ Change initial branch name globally:
 
 `git config --global init.defaultBranch <name>`
 
+Set the default editor to be used with Git:
+
+`git config --global core.editor "vim"`
+
 Show remote:
 
 `git remote show origin`
@@ -68,6 +72,10 @@ Remove uncommitted (and untracked) new files (but don't remove changes in existi
 
 `git clean -df`
 
+Revert already pushed commit:
+
+`git revert -m "message" HEAD`
+
 Create new branch and checkout to it:
 
 `git checkout -b "branchname"`
@@ -112,12 +120,16 @@ See remote:
 
 Fetch changes from remote:
 
-`git fetch origin main` (i.e. `REMOTENAME BRANCHNAME`)
+`git fetch origin` 
 
 Pull changes from remote (fetch + merge):
 
-`git pull origin main` (i.e. `REMOTENAME BRANCHNAME`)
+`git pull origin BRANCHNAME`
 
 Clone repository:
 
 `git clone <url>`
+
+Set new remote url after repository name has been changed:
+
+`git remote set-url origin URL`
