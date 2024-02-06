@@ -186,11 +186,11 @@ Change current branch name:
 
 `git branch -m <name>`
 
-### Workflow example
+### Forking and workflow example
 
-When working with fetched and cloned repo, also add the original as a remote:
+When working with forked and cloned repo, also add the original as a remote:
 
-`git remote add upsream <original-remote>`
+`git remote add upstream <original-remote>`
 
 Fetch changes from upstream:
 
@@ -198,7 +198,7 @@ Fetch changes from upstream:
 
 Attempt merge or review and address conflicts preemptively.
 
-Let's do the latter (__I need to review this part__).
+Let's do the latter (__need to review this part__).
 
 See local commits not on the upstream branch(?):
 
