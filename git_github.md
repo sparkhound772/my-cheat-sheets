@@ -185,3 +185,46 @@ git merge branch2
 Change current branch name:
 
 `git branch -m <name>`
+
+### Workflow example
+
+When working with fetched and cloned repo, also add the original as a remote:
+
+`git remote add upsream <original-remote>`
+
+Fetch changes from upstream:
+
+`git fetch upstream main`
+
+Attempt merge or review and address conflicts preemptively.
+
+Let's do the latter (__I need to review this part__).
+
+See local commits not on the upstream branch(?):
+
+`git log upstream/main..HEAD`
+
+Review new commits:
+
+`git show <commit>`
+
+Compare local branch with upstream branch:
+
+`git diff <branch> upstream/main`
+
+Resolve conflicts, test, add and commit.
+
+Merge upstream:
+
+`git merge upstream/main` 
+
+Test and push.
+
+Summary:
+
+1. Track/stage and commit local changes.
+2. Fetch remote. 
+3. Review changes, resolve conflicts and test.
+3. Merge remote and resolve any additional conflicts, and test more.
+4. Stage and commit.
+5. Push to remote.
