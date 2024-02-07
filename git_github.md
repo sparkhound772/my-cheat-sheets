@@ -20,7 +20,7 @@ Log (simple):
 
 Log (graph):
 
-`git log --branch`
+`git log --graph`
 
 ### Diff
 
@@ -43,6 +43,11 @@ Diff between two commits:
 Diff within file:
 
 `git diff <file>`
+
+Diff between local and remote branch:
+
+`git diff main origin/main`
+
 
 ### Configuration
 
@@ -203,6 +208,10 @@ Let's do the latter (__need to review this part__).
 See local commits not on the upstream branch(?):
 
 `git log upstream/main..HEAD`
+
+or(?)
+
+`git log upstream/main..main`
 
 Review new commits:
 
