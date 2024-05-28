@@ -166,6 +166,16 @@ Revert already pushed commit:
 
 `git revert -m "message" HEAD`
 
+Change commit message of already commited commit (but keep the contents of the commit):
+
+```
+git commit --amend -m "New commit message"
+# --force is necessary because the commit history is being altered,
+# but be careful as it may overwrite changes on the remote if the devs have already pulled
+# the original commit.
+git push --force origin main 
+```
+
 ### Branches
 
 Create new branch and checkout to it:
