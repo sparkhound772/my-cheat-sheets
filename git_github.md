@@ -40,6 +40,10 @@ Diff between two commits:
 
 `git diff <commit-hash-1> <commit-hash-2>`
 
+Diff between files:
+
+`git diff <file1> <file2>`
+
 Diff within file:
 
 `git diff <file>`
@@ -48,6 +52,25 @@ Diff between local and remote branch:
 
 `git diff main origin/main`
 
+Diff between commit and WD:
+
+`git diff <commit>`
+
+Diff in file between last commit and the one before:
+
+`git diff HEAD~1 HEAD -- README.md`
+
+Word diff:
+
+`git diff --word-diff`
+
+Summary:
+
+`git diff --stat`
+
+Changes that would be made by merging a branch:
+
+`git diff main...feature-branch`
 
 ### Configuration
 
